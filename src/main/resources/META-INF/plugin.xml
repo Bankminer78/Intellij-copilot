@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.bankminer78.intellijcopilot</id>
-    <name>Intellij-copilot</name>
+    <name>Copilot</name>
     <vendor>bankminer78</vendor>
 
     <depends>com.intellij.modules.platform</depends>
@@ -11,5 +11,18 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.bankminer78.intellijcopilot.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
         <postStartupActivity implementation="com.github.bankminer78.intellijcopilot.startup.MyProjectActivity" />
+        <inline.completion.provider
+                implementation="com.github.bankminer78.intellijcopilot.ChatInlineCompletionProvider"/>
+        <notificationGroup
+                id="IntelliJCopilot"
+                displayType="BALLOON" />
+        <applicationConfigurable
+                parentId="tools"
+                id="com.github.bankminer78.intellijcopilot.OpenAIConfigurable"
+                displayName="Copilot API Key"
+                instance="com.github.bankminer78.intellijcopilot.ChatConfigurable"/>
     </extensions>
+
+
+
 </idea-plugin>
