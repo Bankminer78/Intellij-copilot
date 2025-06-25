@@ -1,7 +1,10 @@
 # IntelliJ Copilot Plugin
 
+<!-- Plugin description -->
+
 A simple IntelliJ IDEA plugin that demonstrates proof-of-concept AI-assisted code completion using the OpenAI Chat Completions API (gpt-4o). It injects inline “ghost text” suggestions after the user pauses typing.
 
+<!-- Plugin description end -->
 ---
 
 ## Features
